@@ -5,7 +5,7 @@
 	"main": "recipes_data.js",
 	"scripts": {
 		"test": "jest --setupFiles dotenv/config",
-		"start": "nodemon -r dotenv/config server.js",
+		"start": "node -r dotenv/config server.js",
 		"dbcreaterecipetable": "node -r dotenv/config ./db/scripts/createTableRecipes.js",
 		"dbcreateingredienttable": "node -r dotenv/config ./db/scripts/createTableIngredients.js",
 		"dbpopulaterecipes": "node -r dotenv/config ./db/scripts/populateRecipes.js",
