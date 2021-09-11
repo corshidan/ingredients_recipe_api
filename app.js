@@ -27,11 +27,13 @@ app.use((req, res, next) => {
 });
 app.options('*', cors());
 */
+app.get('/', (req, res, next) => {
+	res.json({
+		success: true,
+		message: 'Head over to /recipes for recipes or /ingredients for the list of ingredients',
+	});
+});
 app.use('/recipes', recipeRouter);
 app.use('/ingredients', ingredientsRouter);
 
 module.exports = app;
-
-
-
-
